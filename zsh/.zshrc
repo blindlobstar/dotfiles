@@ -114,7 +114,7 @@ export DOTNET_ROOT=/usr/local/share/dotnet
 
 export NNN_PLUG='v:preview-tui;j:autojump;c:cbcopy-mac;p:cbpaste-mac'
 export NNN_FIFO='/tmp/nnn.fifo'
-export NNN_BMS="d:~/Documents;D:~/Downloads"
+export NNN_BMS="d:~/Documents;D:~/Downloads;b:~/Documents/betbot.tv;w:~/Documents/SDG"
 
 export EDITOR="code -w"
 export VISUAL="code -w"
@@ -135,9 +135,9 @@ n ()
     export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
     if [ -n "$TMUX" ]; then
-        nnn -e -d $@
+        nnn -e -d -A $@
     else
-        tmux new-session nnn -e -d $@
+        tmux new-session nnn -e -d -A $@
     fi
 
     [ ! -f "$NNN_TMPFILE" ] || {
