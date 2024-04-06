@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:~/Documents/personal/git-commands
+export PATH=$PATH:~/.cargo/bin
 export DOTNET_ROOT=/usr/local/share/dotnet
 
 
