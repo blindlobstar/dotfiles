@@ -77,6 +77,7 @@ plugins=(
     docker-compose 
     pass
     autojump
+    gh
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,13 +109,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:~/.git-commands
 export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/go/bin
 export DOTNET_ROOT=/usr/local/share/dotnet
 
 
 # NNN configuration
 
 export NNN_PLUG='v:preview-tui;j:autojump;c:cbcopy-mac;p:cbpaste-mac'
-export NNN_FIFO='/tmp/nnn.fifo'
+# export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_BMS="d:~/Documents;D:~/Downloads;b:~/Documents/betbot.tv;w:~/Documents/SDG"
 
 export EDITOR="code -w"
@@ -136,9 +138,9 @@ n ()
     export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
     if [ -n "$TMUX" ]; then
-        nnn -e -d -A $@
+        nnn -e -d -A -a $@
     else
-        tmux new-session nnn -e -d -A $@
+        tmux new-session nnn -e -d -A -a $@
     fi
 
     [ ! -f "$NNN_TMPFILE" ] || {
