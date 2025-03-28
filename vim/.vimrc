@@ -24,6 +24,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Remove Esc key delay
+set timeoutlen=1000 ttimeoutlen=0
+
 " Default encoding
 set encoding=utf-8
 scriptencoding utf-8
