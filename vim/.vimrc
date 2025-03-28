@@ -83,8 +83,6 @@ set relativenumber
 " --MAPPING--
 let mapleader = ' '
 
-nnoremap <leader>e :NERDTreeToggle<CR>
-
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
@@ -180,7 +178,6 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " --PLUGGINS--
 call plug#begin()
 
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
