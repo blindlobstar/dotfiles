@@ -178,10 +178,15 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
-" --PLUGGINS--
+" Mapping FZF selecting mappings
+nmap <silent><leader>p :Files<CR>
+nmap <silent><leader>b :Buffers<CR>
+
+" --PLUGINS--
 call plug#begin()
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
