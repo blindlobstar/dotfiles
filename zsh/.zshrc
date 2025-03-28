@@ -154,3 +154,7 @@ wallpaper () { automator -i "${1}" ~/Documents/automator-workflows/setDesktopPix
 
 export XDG_CONFIG_HOME="$HOME/.config"
 alias lg='lazygit --use-config-file="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/lavender.yml"'
+
+# FZF show hidden files except .get and node_modules
+export FZF_DEFAULT_COMMAND="rg -. -g '!.git/**' -g '!node_modules/**' --files"
+
