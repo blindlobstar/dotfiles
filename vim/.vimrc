@@ -83,6 +83,10 @@ set number
 " Show relative line numbers
 set relativenumber
 
+" Wildmenu
+set wildmenu
+set wildmode=list:longest,list:full
+
 " --MAPPING--
 let mapleader = ' '
 
