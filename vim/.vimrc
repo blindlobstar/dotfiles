@@ -205,7 +205,10 @@ nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer
-command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :silent :call CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+" Auto import organize on save
+autocmd BufWritePre *.go :silent :call CocAction('runCommand', 'editor.action.organizeImport')
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
