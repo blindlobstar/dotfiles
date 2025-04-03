@@ -90,6 +90,9 @@ set wildmode=list:longest,list:full
 " --MAPPING--
 let mapleader = ' '
 
+" Unmap space in normal mode
+nnoremap <Space> <NOP>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
@@ -214,7 +217,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mapping FZF selecting mappings
 nmap <silent><leader>p :Files<CR>
-nmap <silent><leader>b :Buffers<CR>
+nmap <silent><leader>B :Buffers<CR>
 
 " --PLUGINS--
 call plug#begin()
