@@ -55,6 +55,10 @@ set backspace=indent,eol,start
 " Always showing status line at the bottom of the window
 set laststatus=2
 
+set statusline= 
+set statusline+=\ %f
+set statusline+=\ %m
+
 " Check word spelling
 set spell
 
