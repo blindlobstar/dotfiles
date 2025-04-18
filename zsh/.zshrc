@@ -119,7 +119,7 @@ export NNN_PLUG='v:preview-tui;j:autojump;c:cbcopy-mac;p:cbpaste-mac'
 # export NNN_FIFO='/tmp/nnn.fifo'
 export NNN_BMS="d:~/Documents;D:~/Downloads"
 
-export EDITOR="code -w"
+export EDITOR="vim"
 export VISUAL="code -w"
 
 n ()
