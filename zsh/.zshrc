@@ -120,7 +120,7 @@ export NNN_PLUG='v:preview-tui;j:autojump;c:cbcopy-mac;p:cbpaste-mac'
 export NNN_BMS="d:~/Documents;D:~/Downloads"
 
 export EDITOR="vim"
-export VISUAL="code -w"
+export VISUAL="vim"
 
 n ()
 {
@@ -138,9 +138,9 @@ n ()
     export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
     if [ -n "$TMUX" ]; then
-        nnn -e -d -A -a $@
+        nnn -eE -d -A -a $@
     else
-        tmux new-session nnn -e -d -A -a $@
+        tmux new-session nnn -eE -d -A -a $@
     fi
 
     [ ! -f "$NNN_TMPFILE" ] || {
