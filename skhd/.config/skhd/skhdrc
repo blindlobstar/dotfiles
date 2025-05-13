@@ -10,54 +10,6 @@ ctrl - l [
     "rectangle" ~
 ]
 
-# Finder vim keybindings
-:: input
-
-# keysym for mode replacement ";"
-# cmd + alt + ctrl - 8 ; input
-
-# shift + cmd - g -> [
-#     "Finder" : skhd -k "cmd + alt + ctrl - 8"  
-# ]
-# return -> [
-#     "Finder" : skhd -k "cmd + alt + ctrl - 8"
-# ]
-
-# # esc - back to default mode
-# input < 0x35 -> ; default 
-# input < return -> ; default
-
-# j [ 
-#     "Finder" : skhd -k "down" 
-# ]
-# k [ 
-#     "Finder" : skhd -k "up" 
-# ]
-
-# h [
-#     "Finder" : skhd -k "cmd - up"
-# ]
-# l [
-#     "Finder" : skhd -k "cmd - down"
-# ]
-
-# gg [
-#     "Finder" : skhd -k "alt - up"
-# ]
-
-# shift - g [
-#     "Finder" : skhd -k "alt - down"
-# ]
-
-# shift - j [
-#     "Finder" : skhd -k "shift - down"
-# ]
-
-# shift - k [
-#     "Finder" : skhd -k "shift - up"
-# ]
-
-
 # yabai
 # change window focus within space
 alt - j : yabai -m window --focus south
