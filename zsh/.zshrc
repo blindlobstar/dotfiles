@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/.git-commands
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/go/bin
+export PATH="$PATH:$HOME/.local/bin"
 export DOTNET_ROOT=/usr/local/share/dotnet
 
 
@@ -157,7 +158,3 @@ alias lg='lazygit --use-config-file="$HOME/.config/lazygit/config.yml,$HOME/.con
 
 # FZF show hidden files except .get and node_modules
 export FZF_DEFAULT_COMMAND="rg -. -g '!.git/**' -g '!node_modules/**' --files"
-
-# Vim as a manpager
-export MANPAGER="col -b | vim -M -c 'set ft=man nomod nolist nonu' -c 'nnoremap i <nop>' -"
-
