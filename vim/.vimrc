@@ -10,6 +10,9 @@ colorscheme slate
 " Turn syntax highlighting on.
 syntax on
 
+" New fast regex for syntax highlighting
+set re=0
+
 " Set shift width to 4 spaces.
 set shiftwidth=4
 
@@ -155,7 +158,7 @@ function! CheckBackspace() abort
 endfunction
 
 " Trigger signature help
-inoremap <silent><expr> <A-Space> "\<C-r>=CocActionAsync('showSignatureHelp')\<CR>"
+inoremap <silent><expr> <M-Space> "\<C-r>=CocActionAsync('showSignatureHelp')\<CR>"
 
 " show signature help by default
 autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
@@ -216,16 +219,17 @@ nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer
-command! -nargs=0 OR :silent :call CocActionAsync('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :silent call CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 " Auto import organize on save
-autocmd BufWritePre *.go :silent :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mapping FZF selecting mappings
 nmap <silent><leader>p :Files<CR>
 nmap <silent><leader>B :Buffers<CR>
+nmap <silent><leader>F :Rg<CR>
 
 " --PLUGINS--
 call plug#begin()

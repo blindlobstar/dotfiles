@@ -157,4 +157,4 @@ export XDG_CONFIG_HOME="$HOME/.config"
 alias lg='lazygit'
 
 # FZF show hidden files except .get and node_modules
-export FZF_DEFAULT_COMMAND="rg -. -g '!.git/**' -g '!node_modules/**' --files"
+export FZF_DEFAULT_COMMAND="rg --no-filename --no-line-number -. -g '!.git/**' -g '!node_modules/**' --files"
