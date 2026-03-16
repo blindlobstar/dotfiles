@@ -61,6 +61,10 @@ set statusline+=\ %m
 
 " Check word spelling
 set spell
+set spelloptions=camel
+set spellcapcheck= " removing SpellCap warnings
+syntax spell toplevel
+autocmd BufEnter * syntax spell toplevel
 
 " Use standard clipboard buffer
 set clipboard=unnamed
